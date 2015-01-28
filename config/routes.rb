@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
 
+  namespace :machine do
+    get 'pfm1/index'
+  end
+
   get 'main/index'
   root 'main#index'
 

@@ -64,3 +64,4 @@ gem 'jquery-ui-rails'
 gem 'jquery-tablesorter'
 gem 'responders'
 #gem 'ruby-net-ldap'
+gem "loop_dance"
