@@ -39,21 +39,16 @@ class Machine::Pfm1Controller < ApplicationController
 
     render xml: @form_data
 
-
-    # respond_to do |format|
-    #   format.html  { render :xml => @form_data }
-    #   format.xml  { render :xml => @form_data }
-    # end
-
-    # render xml: Pfm1.where('is_check = ?', 0).first
+  end
 
 
-    # @pfm1 = Pfm1.where('is_check = ?', 0).first
+  def srv_get_all_uncheck
 
-    # respond_to do |format|
-    #   format.xml
-    # end
+    @form_data = {
+        pfml1: Pfm1.where('is_check = ?', 0)
+    }
 
+    render xml: @form_data
 
   end
 
