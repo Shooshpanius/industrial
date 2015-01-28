@@ -10,8 +10,6 @@ class Machine::Pfm1Controller < ApplicationController
 
   def srv_from_plu
 
-    str = params[:data]
-
     str = params[:data].gsub(/[^0-9\*]/, '').to_s.split('*')
 
     if Pfm1.where('id_in_plu = ? and is_check = ?', str[0], 0).length == 0
