@@ -1,6 +1,6 @@
 class Machine::Pfm1Controller < ApplicationController
 
-
+  skip_before_filter :verify_authenticity_token, :only => [:srv_from_plu]
 
 
   def index
@@ -9,8 +9,6 @@ class Machine::Pfm1Controller < ApplicationController
 
 
   def srv_from_plu
-
-    protect_from_forgery with: :null_session
 
     render nothing: true
 
