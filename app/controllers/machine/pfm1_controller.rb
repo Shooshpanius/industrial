@@ -12,7 +12,7 @@ class Machine::Pfm1Controller < ApplicationController
 
     str = params[:data].gsub(/[^0-9\*]/, '').to_s.split('*')
 
-    if Pfm1.where('id_in_plu = ? and is_check = ?', str[0], nil).size == 0
+    if Pfm1.where('id_in_plu = ? and is_check = ?', str[0], 0).size == 0
       Pfm1.create(
            id_in_plu: str[0],
            width: str[1],
@@ -23,7 +23,7 @@ class Machine::Pfm1Controller < ApplicationController
            k1: str[6],
            k2: str[7],
            k3: str[8],
-           is_check: str[9]
+           is_check: 0
       )
      end
 
