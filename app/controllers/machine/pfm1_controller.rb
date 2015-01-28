@@ -30,6 +30,33 @@ class Machine::Pfm1Controller < ApplicationController
     render nothing: true
 
   end
+
+  def srv_get_one_uncheck
+
+    @form_data = {
+        pfml1: Pfm1.where('is_check = ?', 0)[0]
+    }
+
+    render xml: @form_data
+
+
+    # respond_to do |format|
+    #   format.html  { render :xml => @form_data }
+    #   format.xml  { render :xml => @form_data }
+    # end
+
+    # render xml: Pfm1.where('is_check = ?', 0).first
+
+
+    # @pfm1 = Pfm1.where('is_check = ?', 0).first
+
+    # respond_to do |format|
+    #   format.xml
+    # end
+
+
+  end
+
 end
 
 

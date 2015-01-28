@@ -63,5 +63,6 @@ gem 'net-ldap-1'
 gem 'jquery-ui-rails'
 gem 'jquery-tablesorter'
 gem 'responders'
+gem 'builder'
 #gem 'ruby-net-ldap'
 # gem "loop_dance"

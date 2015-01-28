@@ -190,6 +190,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass
+  builder
   byebug
   capistrano (~> 2.15)
   coffee-rails (~> 4.1.0)
