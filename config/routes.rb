@@ -2,8 +2,10 @@ Rails.application.routes.draw do
 
 
   namespace :machine do
-    get 'pfm1/index'
+    resources :pfm1, path: 'pfm1/(:action)(:id)(.:format)'
   end
+
+
 
   get 'main/index'
   root 'main#index'
