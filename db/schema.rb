@@ -14,7 +14,8 @@
 ActiveRecord::Schema.define(version: 20150128150013) do
 
   create_table "pfm1s", force: :cascade do |t|
-    t.integer  "id_in_plu",  limit: 4
+    t.integer  "id_in_plu",  limit: 8
+    t.integer  "type_of",    limit: 4, default: 0
     t.integer  "width",      limit: 4, default: 0
     t.integer  "height",     limit: 4, default: 0
     t.integer  "l1",         limit: 4, default: 0
