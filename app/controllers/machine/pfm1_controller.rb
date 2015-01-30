@@ -54,7 +54,7 @@ class Machine::Pfm1Controller < ApplicationController
   end
 
 
-  def srv_get_one_uncheck
+  def srv_one_one_check
 
     Pfm1.update(
         params[:id_in_plu],
