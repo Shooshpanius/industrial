@@ -61,6 +61,8 @@ class Machine::Pfm1Controller < ApplicationController
         is_check: 1,
     )
 
+    render :text => '1'
+
   end
 
 
